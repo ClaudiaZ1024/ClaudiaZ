@@ -1,8 +1,8 @@
 # 001: Write `.gitignore`
 
 - **Status:** active
-- **Created:** YYYY-MM-DD
-- **Updated:** YYYY-MM-DD
+- **Created:** 2026-11-12
+- **Updated:** 2026-11-12
 - **Due:** 2026-11-01, before task 002
 
 ## Goal
@@ -65,5 +65,7 @@ If your data cannot be stored on GitHub, because they are too large or their lic
 `.gitignore` is pushed, and after `uv sync` in task 002, `git status` does not list `.venv/`. Close this task then.
 
 ## Progress log
+
+- **2026-11-12:** Created `.gitignore`, at first inside `tasks/` by mistake, so `git status` still listed `.DS_Store` in the top folder. Moved the file to the top folder and removed the two code-fence lines pasted in with it. `git status` then no longer listed `.DS_Store`. Committed as a8ab383 ("Add .gitignore") and pushed. Still to check after `uv sync` in task 002: `git status` does not list `.venv/`.
 
 ## Outcome

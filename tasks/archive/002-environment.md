@@ -1,8 +1,8 @@
 # 002: Copy the course environment
 
 - **Status:** active
-- **Created:** YYYY-MM-DD
-- **Updated:** YYYY-MM-DD
+- **Created:** 2026-11-12
+- **Updated:** 2026-11-12
 - **Due:** 2026-11-01, after task 001
 
 ## Goal
@@ -77,5 +77,7 @@ If the course announces a change to its package list, copy the three files again
 The cell in step 4 prints Python 3.14 and the same package versions as a session notebook, and the three files are pushed.
 
 ## Progress log
+
+- **2026-11-12:** Copied `pyproject.toml`, `uv.lock`, and `.python-version` from the course clone and ran `uv sync`. The Python on my laptop was 3.14.6, whereas the course environment runs 3.14.8, so I deleted the first `.venv` with `rm -rf .venv` and rebuilt it with `uv sync --managed-python`. The new `.venv` reports Python 3.14.8, NumPy 2.5.3, pandas 3.0.6, SciPy 1.18.1, and Matplotlib 3.11.2, the same five versions as the course clone's `.venv`. `git status` does not list `.venv/`, so the `.gitignore` from task 001 works. Committed the three files as 01bd294 ("Copy the course environment") and pushed.
 
 ## Outcome
