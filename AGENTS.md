@@ -28,6 +28,15 @@ When the student asks for a plan, give it in words and write no code until the s
 
 The student replaces the three lines below and adds a line each time they correct the assistant on the same point twice.
 
-- Question: (one sentence)
-- Data: (the file in `data/`, what one row is, and its source URL and access date)
-- Measured variable: (its column name and unit)
+- Question: In hyperspectral SRS spectra of a human skin section, at what Raman shift (cm⁻¹) is the maximum of the amide I band, and does it agree with the literature value for skin collagen (about 1661 cm⁻¹)?
+- Data: committed unmodified to `data/skin_section_2/`:
+  - `skin_srs_small_sampling_hyperspectral_registered_confocal.pickle` (45 MB): the SRS hyperspectral cube
+  - `srs_Raman_shift.pickle` (1 KB): the Raman shift of each spectral channel
+- The dataset also contains spontaneous Raman spectra of the same section, but that file is 748.8 MB, over GitHub's 100 MB limit, so I do not use it.
+- Measured variable: 
+| Variable | Unit | Range |
+|---|---|---|
+| Raman shift | cm⁻¹ | 708.7 to 1750, 125 channels, spacing 7.6 to 9.2 |
+| SRS intensity | arbitrary units (float32) | 0 to 246.9 |
+| Pixel position | pixel index | 300 × 300 |
+
